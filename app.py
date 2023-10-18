@@ -45,12 +45,12 @@ def upload_file():
     # Guardar el archivo en S3
     s3.upload_fileobj(
         file,
-        'buckejercicio',
+        'bucketlabaws',
         'uploads/' + filename,
         ExtraArgs={'ACL': 'public-read'}
     )
 
-    urlfile = f'https://buckejercicio.s3.amazonaws.com/uploads/{filename}'
+    urlfile = f'https://bucketlabaws.s3.amazonaws.com/uploads/{filename}'
 
     # Guardar los datos en la base de datos
     try:
